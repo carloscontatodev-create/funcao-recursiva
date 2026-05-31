@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int fibonacciRecursivo(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+    return fibonacciRecursivo(n - 1) + fibonacciRecursivo(n - 2);
+}
+
+int main() {
+    int n;
+    
+    printf("Digite a posicao do termo de Fibonacci que deseja encontrar: ");
+    scanf("%d", &n);
+    
+    printf("O termo na posicao %d da sequencia de Fibonacci e: %d\n", n, fibonacciRecursivo(n));
+    
+    system("pause");
+    return 0;
+}
